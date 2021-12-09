@@ -15,7 +15,7 @@
     <tbody>
       {% for book in books %}
         <tr>
-          <td>{{ book.bookName }}</td>
+          <td><button type="button"> {{ book.bookName }}</button></td>
           <td>{{ book.authorString }}</td>
           <td>{{ book.publishedDate }}</td>
           <td>{{ book.onIbReadingList }}</td>
@@ -32,6 +32,13 @@
   <script>
     $(document).ready(function () {
       $('#data').DataTable({
+		dom: 'frtBip',
+		buttons: [{
+                text: 'My button',
+                action: function ( e, dt, node, config ) {
+                    alert( 'Button activated' );
+                }
+            }]
       });
     });
   </script>
