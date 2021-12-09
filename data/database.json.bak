@@ -1,0 +1,108 @@
+{
+    "stored_books": [
+        {
+            "Book Name": "Jekyll Island Chronicles - Machine Age War",
+            "Author": [
+                "Steve Nedvidek",
+                "Ed Crowell",
+                "Jack Lowe",
+                "Moses Nester",
+                "S. J. Miller"
+            ],
+            "ISBN Num": "978-1-60309-388-0",
+            "Published Date": "2017",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "The Gunslinger",
+            "Author": [
+                "Stephen King",
+                "Stephen King"
+            ],
+            "ISBN Num": "9780452279605",
+            "Published Date": "1997",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "Harry Potter and the Philosopher's Stone",
+            "Author": [
+                "J. K. Rowling"
+            ],
+            "ISBN Num": "9780747532743",
+            "Published Date": "2000",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "League of Extraordinary Gentlemen - the Tempest",
+            "Author": [
+                "Alan Moore",
+                "Kevin O'Neill"
+            ],
+            "ISBN Num": "978-1-60309-456-6",
+            "Published Date": "2019",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "March - Book Three",
+            "Author": [
+                "John Lewis",
+                "Nate Powell",
+                "Andrew Aydin",
+                "Andrew Aydin"
+            ],
+            "ISBN Num": "978-1-60309-402-3",
+            "Published Date": "2016",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "Penny Nichols",
+            "Author": [
+                "M. K. Reed",
+                "Greg Means",
+                "Matt Wiegle"
+            ],
+            "ISBN Num": "978-1-60309-448-1",
+            "Published Date": "2019",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        },
+        {
+            "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
+            "Author": [
+                "Rick Riordan",
+                "Editorial Universe",
+                "Jesse Bernstein"
+            ],
+            "ISBN Num": "9781423121701",
+            "Published Date": "2009",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": ""
+        }
+    ]
+}
