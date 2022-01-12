@@ -13,14 +13,14 @@
             "Published Date": "2017",
             "On IB Reading List": true,
             "Checked In": true,
-            "Tags": ["Fantasy", "Fiction"],
+            "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "The Gunslinger",
             "Author": [
-                "Stephen King",
                 "Stephen King"
             ],
             "ISBN Num": "9780452279605",
@@ -29,7 +29,8 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "Harry Potter and the Philosopher's Stone",
@@ -42,7 +43,8 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "League of Extraordinary Gentlemen - the Tempest",
@@ -56,14 +58,14 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "March - Book Three",
             "Author": [
                 "John Lewis",
                 "Nate Powell",
-                "Andrew Aydin",
                 "Andrew Aydin"
             ],
             "ISBN Num": "978-1-60309-402-3",
@@ -72,7 +74,8 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "Penny Nichols",
@@ -87,7 +90,22 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "Moby Dick",
+            "Author": [
+                "Herman Melville"
+            ],
+            "ISBN Num": "9783863524586",
+            "Published Date": "2020",
+            "On IB Reading List": true,
+            "Checked In": false,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "adsf",
+            "Checked out date": "asdf"
         },
         {
             "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
@@ -102,7 +120,8 @@
             "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": ""
+            "Checked out by:": "",
+            "Checked out date": ""
         }
     ]
 }

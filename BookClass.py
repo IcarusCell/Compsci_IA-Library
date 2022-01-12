@@ -34,7 +34,7 @@ class Book:
         self.checkedOutBy = ""
         self.authorString = self.authorNamesInString()
         self.tagString = self.tagsInString()
-
+        self.checkedOutDate = ''
     @classmethod
     def withIsbn(cls, isbnNum, onIbReadingList, tags):
         isbnNum = str(isbnNum)
@@ -77,7 +77,7 @@ class Book:
                     iter += 1
                     authorString = tagString + "," + self.author[iter]
 
-            return tagString
+            return str(tagString)
         return
 
 

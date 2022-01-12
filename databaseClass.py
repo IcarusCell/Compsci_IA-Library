@@ -11,11 +11,12 @@ def saveToDatabase(book):
                 'Author': book.author,
                 'ISBN Num': book.isbnNum,
                 'Published Date': book.publishedDate,
-                'On IB Reading List': book.onIbReadiList,
+                'On IB Reading List': book.onIbReadingList,
                 'Checked In': book.checkedIn,
                 'Tags': book.tags,
                 'Reviews': book.reviews,
-                'Checked out by:': book.checkedOutBy
+                'Checked out by:': book.checkedOutBy,
+                'Checked out date': book.checkedOutDate
         }
         jsonFile["stored_books"].append(detailDict)
         database.seek(0)
@@ -47,5 +48,14 @@ def loadDatabase():
             #The book is then appended to the books list.
             for book in jsonFile["stored_books"]:
                newBook = Book(book["Book Name"], book["Author"], book["Published Date"], book["On IB Reading List"], book["Tags"])
+               newBook.checkedIn = bool(book["Checked In"])
+               newBook.checkedOutBy = str(book["Checked out by:"])
+               newBook.isbnNum = str(book["ISBN Num"])
+               newBook.reviews = book["Reviews"]
                books.append(newBook)
         return books
+
+def overrideDatabase(newDatabase):
+    wipeDatabase()
+    for book in newDatabase:
+        saveToDatabase(book)

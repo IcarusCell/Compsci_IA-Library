@@ -15,7 +15,11 @@
     <tbody>
       {% for book in books %}
         <tr>
-          <td><button type="button"> {{ book.bookName }}</button></td>
+          <td> 
+				<form method="get" action="/book/{{ book.bookName }}">
+					<button type="post">{{ book.bookName }}</button>
+				</form>
+		  </td>
           <td>{{ book.authorString }}</td>
           <td>{{ book.publishedDate }}</td>
           <td>{{ book.onIbReadingList }}</td>
@@ -33,12 +37,6 @@
     $(document).ready(function () {
       $('#data').DataTable({
 		dom: 'frtBip',
-		buttons: [{
-                text: 'My button',
-                action: function ( e, dt, node, config ) {
-                    alert( 'Button activated' );
-                }
-            }]
       });
     });
   </script>
