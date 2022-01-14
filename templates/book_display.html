@@ -1,0 +1,32 @@
+{% extends "basic_display.html" %}
+{% block title %}{{book.bookName}}{% endblock %}
+{% block content %}
+
+<h1>{{book.bookName}}</h1>
+	<body style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
+		<p>Author: {{book.authorString}}</p>
+		<p>Date Published: {{book.publishedDate}}</p>
+		<p>Is the book checked in: {{book.checkedIn}}</p>
+		<p>Is the book on the IB Reading list: {{book.onIbReadingList}}</p>
+		<p>Tags: {{book.tagString}}</p>
+	<body>
+	{% if book.checkedIn == false %}
+		<p>Checked Out By: {{book.checkedOutBy }}</p>
+		<p>Checked Out On (m/d/y): {{book.checkedOutDate}}</p>
+		
+	{% endif %}
+	
+	{% if book.checkedIn == true %}
+		<div>
+		<form method="get" action="/book/check_out/{{ book.bookName }}">
+			<button type="submit">Check Out</button>
+		</form>
+		</div>
+	{% else %}
+		<div>
+		<form method="get" action="/book/check_in/{{ book.bookName }}">
+			<button type="submit">Check In</button>
+		</form>
+		</div>
+	{% endif %}
+{% endblock %}

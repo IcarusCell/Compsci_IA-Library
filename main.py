@@ -10,6 +10,7 @@ from flask import Flask, render_template, request, redirect, url_for
 ISBN = ["978-1-60309-388-0","9780452279605", "9780747532743", "978-1-60309-456-6", "978-1-60309-402-3", "978-1-60309-448-1", "9783863524586", "9781423121701"]
 app = Flask(__name__)
 #--------------------
+"""
 wipeDatabase()
 for isbn in ISBN:
     print("Trying " + isbn)
@@ -18,7 +19,7 @@ for isbn in ISBN:
         saveToDatabase(book)
     except:
         print("Book is unable to be saved via ISBN, please save it manually.")
-
+"""
 
 """for isbn in ISBN:
     try:
@@ -75,12 +76,11 @@ def checkOut(bookName):
         if request.method == "POST":
             for book in database:
                 if book.bookName == title:
-                    checkedOutDate = request.form['submit_date']
-                    studentName = request.form['student_name']
+                    checkedOutDate = str(request.form['submit_date'])
+                    studentName = str(request.form['student_name'])
                     book.checkedIn = False
-                    book.checkedOutBy = studentName
-                    book.checkedOutDate = checkedOutDate
-            print(type(database))
+                    book.checkedOutBy = str(studentName)
+                    book.checkedOutDate = str(checkedOutDate)
             overrideDatabase(database)
             return redirect(url_for('index'))
         else:
@@ -89,6 +89,17 @@ def checkOut(bookName):
                 if book.bookName == title:
                     return render_template("book_check_out.html")
 
+@app.route('/book/check_in/<bookName>')
+def checkIn(bookName):
+        title = bookName
+        database = loadDatabase()
+        for book in database:
+            if book.bookName == title:
+                book.checkedIn = True
+                book.checkedOutBy = ''
+                book.checkedOutDate = ''
+        overrideDatabase(database)
+        return redirect(url_for('index'))
 @app.route('/<test>')
 def test(test):
     return test + " test route."

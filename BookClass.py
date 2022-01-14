@@ -31,7 +31,7 @@ class Book:
                 cleanTags.append(tag)
         self.tags = cleanTags
         self.reviews = []
-        self.checkedOutBy = ""
+        self.checkedOutBy = ''
         self.authorString = self.authorNamesInString()
         self.tagString = self.tagsInString()
         self.checkedOutDate = ''

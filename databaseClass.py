@@ -52,6 +52,7 @@ def loadDatabase():
                newBook.checkedOutBy = str(book["Checked out by:"])
                newBook.isbnNum = str(book["ISBN Num"])
                newBook.reviews = book["Reviews"]
+               newBook.checkedOutDate = str(book['Checked out date'])
                books.append(newBook)
         return books
 

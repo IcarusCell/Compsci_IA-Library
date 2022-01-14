@@ -101,11 +101,11 @@
             "ISBN Num": "9783863524586",
             "Published Date": "2020",
             "On IB Reading List": true,
-            "Checked In": false,
+            "Checked In": true,
             "Tags": [],
             "Reviews": [],
-            "Checked out by:": "adsf",
-            "Checked out date": "asdf"
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
