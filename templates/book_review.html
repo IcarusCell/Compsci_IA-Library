@@ -1,0 +1,16 @@
+{% extends "basic_display.html" %}
+{% block title %}Check Out{% endblock %}
+{% block content %}
+
+
+    <form method="post">
+        <label for="review">Review</label>
+        <br>
+        <textarea name="review"
+                  placeholder="Please enter your full text review here"
+                  >{{ request.form['review'] }}</textarea>
+        <br>
+		<label for="review">Current Date</label>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
