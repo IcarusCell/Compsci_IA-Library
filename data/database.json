@@ -28,7 +28,11 @@
             "On IB Reading List": true,
             "Checked In": true,
             "Tags": [],
-            "Reviews": [],
+            "Reviews": [
+                "Test",
+                "Test 2",
+                "Test 3"
+            ],
             "Checked out by:": "",
             "Checked out date": ""
         },

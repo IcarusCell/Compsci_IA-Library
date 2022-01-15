@@ -10,7 +10,7 @@ from flask import Flask, render_template, request, redirect, url_for
 ISBN = ["978-1-60309-388-0","9780452279605", "9780747532743", "978-1-60309-456-6", "978-1-60309-402-3", "978-1-60309-448-1", "9783863524586", "9781423121701"]
 app = Flask(__name__)
 #--------------------
-"""
+
 wipeDatabase()
 for isbn in ISBN:
     print("Trying " + isbn)
@@ -19,7 +19,7 @@ for isbn in ISBN:
         saveToDatabase(book)
     except:
         print("Book is unable to be saved via ISBN, please save it manually.")
-"""
+
 
 """for isbn in ISBN:
     try:
@@ -100,9 +100,35 @@ def checkIn(bookName):
                 book.checkedOutDate = ''
         overrideDatabase(database)
         return redirect(url_for('index'))
-@app.route('/<test>')
-def test(test):
-    return test + " test route."
+@app.route('/book/remove/<bookName>')
+def removeBook(bookName):
+    title = bookName
+    database = loadDatabase()
+    for book in database:
+        if book.bookName == title:
+            database.remove(book)
+    overrideDatabase(database)
+    return redirect(url_for('index'))
+
+@app.route('/book/review/<bookName>', methods =["GET", "POST"])
+def review(bookName):
+        title = bookName
+        database = loadDatabase()
+        if request.method == "POST":
+            for book in database:
+                if book.bookName == title:
+                    summary = str(request.form['review'])
+                    #score = int(request.form['score'])
+                    #review = Review(score, summary)
+
+                    book.reviews.append(summary)#review)
+            overrideDatabase(database)
+            return redirect(url_for('index'))
+        else:
+
+            for book in database:
+                if book.bookName == title:
+                    return render_template("book_review.html")
 
 if __name__ == '__main__':
     app.run()
