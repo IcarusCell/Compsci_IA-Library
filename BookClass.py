@@ -35,6 +35,8 @@ class Book:
         self.authorString = self.authorNamesInString()
         self.tagString = self.tagsInString()
         self.checkedOutDate = ''
+        self.isFrench = False
+
     @classmethod
     def withIsbn(cls, isbnNum, onIbReadingList, tags):
         isbnNum = str(isbnNum)

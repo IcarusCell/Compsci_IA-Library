@@ -9,8 +9,9 @@ from flask import Flask, render_template, request, redirect, url_for
 #-------VARS---------
 ISBN = ["978-1-60309-388-0","9780452279605", "9780747532743", "978-1-60309-456-6", "978-1-60309-402-3", "978-1-60309-448-1", "9783863524586", "9781423121701"]
 app = Flask(__name__)
+tagList = ['fiction', 'nonfiction', 'fantasy', 'sci-fi', 'horror']
 #--------------------
-
+"""
 wipeDatabase()
 for isbn in ISBN:
     print("Trying " + isbn)
@@ -19,7 +20,7 @@ for isbn in ISBN:
         saveToDatabase(book)
     except:
         print("Book is unable to be saved via ISBN, please save it manually.")
-
+"""
 
 """for isbn in ISBN:
     try:
@@ -129,6 +130,34 @@ def review(bookName):
             for book in database:
                 if book.bookName == title:
                     return render_template("book_review.html")
+
+@app.route('/new_book', methods =["GET", "POST"])
+def createNewBook():
+        database = loadDatabase()
+        if request.method == "POST":
+            print(request.form['bookName'])
+            bookName = request.form['bookName']
+            print(request.form['authorName'])
+            authorName = request.form['authorName']
+            print(request.form['datePublished'])
+            datePublished = request.form['datePublished']
+            print(request.form['onIbReadingList'])
+            onIbReadingList = False
+            if request.form['onIbReadingList'] == 'Yes':
+                onIbReadingList = True
+            tags = []
+            for tag in tagList:
+                try:
+                    if request.form[tag] == 'True':
+                        tags.append(tag)
+                except:
+                    print('Tag is false')
+
+
+            overrideDatabase(database)
+            return redirect(url_for('index'))
+        else:
+            return render_template("new_book.html")
 
 if __name__ == '__main__':
     app.run()

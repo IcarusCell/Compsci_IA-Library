@@ -26,15 +26,11 @@
             "ISBN Num": "9780452279605",
             "Published Date": "1997",
             "On IB Reading List": true,
-            "Checked In": true,
+            "Checked In": false,
             "Tags": [],
-            "Reviews": [
-                "Test",
-                "Test 2",
-                "Test 3"
-            ],
-            "Checked out by:": "",
-            "Checked out date": ""
+            "Reviews": [],
+            "Checked out by:": "Deacon Tait",
+            "Checked out date": "2022-01-15"
         },
         {
             "Book Name": "Harry Potter and the Philosopher's Stone",

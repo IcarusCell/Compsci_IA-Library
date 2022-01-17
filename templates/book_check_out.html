@@ -13,9 +13,8 @@
 
         <label for="submit_date">Current Date</label>
         <br>
-        <textarea name="submit_date"
-                  placeholder="m/d/y"
-                  >{{ request.form['submit_date'] }}</textarea>
+		<input type="date" id="submit_date" name="submit_date">
+
         <br>
         <button type="submit">Submit</button>
     </form>
