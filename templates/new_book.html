@@ -1,0 +1,35 @@
+{% extends "basic_display.html" %}
+{% block title %}Check Out{% endblock %}
+{% block content %}
+
+
+    <form method="post">
+        <label for="bookName">Title</label>
+        <input type="text" id="bookName" name="bookName"><br>
+		
+		<label for="author">Author</label>
+		<input type="text" id="authorName" name="authorName"><br>
+				
+		<label for="author">Date Published</label>
+		<input type="date" id="datePublished" name="datePublished"><br>
+		<label for="onIbReadingList">On IB Reading List:</label><br>
+			<label for = "yesOnIbReadingList" style="text-indent: 3em">Yes</label>
+			<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
+			<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
+			<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
+		
+		<label>Tags: </label><br>
+		<input type="checkbox" id="fiction" name="fiction" value="True">
+		<label for="fiction"> Is it fiction?</label><br>
+		<input type="checkbox" id="nonfiction" name="nonfiction" value="True">
+		<label for="nonfiction"> Is it non-fiction?</label><br>
+		<input type="checkbox" id="fantasy" name="fantasy" value="True">
+		<label for="fantasy"> Is it fantasy?</label><br>
+		<input type="checkbox" id="sci-fi" name="sci-fi" value="True">
+		<label for="sci-fi"> Is it sci-fi?</label><br>
+		<input type="checkbox" id="horror" name="horror" value="True">
+		<label for="horror"> Is it horror?</label><br>
+		
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
