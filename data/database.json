@@ -1,36 +1,39 @@
 {
     "stored_books": [
         {
-            "Book Name": "Jekyll Island Chronicles - Machine Age War",
+            "Book Name": "League of Extraordinary Gentlemen - the Tempest",
             "Author": [
-                "Steve Nedvidek",
-                "Ed Crowell",
-                "Jack Lowe",
-                "Moses Nester",
-                "S. J. Miller"
+                "Alan Moore",
+                "Kevin O'Neill"
             ],
-            "ISBN Num": "978-1-60309-388-0",
-            "Published Date": "2017",
+            "ISBN Num": "978-1-60309-456-6",
+            "Published Date": "2019",
             "On IB Reading List": true,
             "Checked In": true,
-            "Tags": [],
+            "Tags": [
+                "Fiction",
+                "Nonfiction",
+                "Fantasy"
+            ],
             "Reviews": [],
             "Checked out by:": "",
             "Checked out date": ""
         },
         {
-            "Book Name": "The Gunslinger",
+            "Book Name": "Test",
             "Author": [
-                "Stephen King"
+                "test"
             ],
-            "ISBN Num": "9780452279605",
-            "Published Date": "1997",
+            "ISBN Num": "",
+            "Published Date": "2022-01-14",
             "On IB Reading List": true,
-            "Checked In": false,
-            "Tags": [],
+            "Checked In": true,
+            "Tags": [
+                "Nonfiction"
+            ],
             "Reviews": [],
-            "Checked out by:": "Deacon Tait",
-            "Checked out date": "2022-01-15"
+            "Checked out by:": "",
+            "Checked out date": ""
         },
         {
             "Book Name": "Harry Potter and the Philosopher's Stone",
@@ -41,84 +44,9 @@
             "Published Date": "2000",
             "On IB Reading List": true,
             "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "League of Extraordinary Gentlemen - the Tempest",
-            "Author": [
-                "Alan Moore",
-                "Kevin O'Neill"
+            "Tags": [
+                "Nonfiction"
             ],
-            "ISBN Num": "978-1-60309-456-6",
-            "Published Date": "2019",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "March - Book Three",
-            "Author": [
-                "John Lewis",
-                "Nate Powell",
-                "Andrew Aydin"
-            ],
-            "ISBN Num": "978-1-60309-402-3",
-            "Published Date": "2016",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "Penny Nichols",
-            "Author": [
-                "M. K. Reed",
-                "Greg Means",
-                "Matt Wiegle"
-            ],
-            "ISBN Num": "978-1-60309-448-1",
-            "Published Date": "2019",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "Moby Dick",
-            "Author": [
-                "Herman Melville"
-            ],
-            "ISBN Num": "9783863524586",
-            "Published Date": "2020",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
-            "Author": [
-                "Rick Riordan",
-                "Editorial Universe",
-                "Jesse Bernstein"
-            ],
-            "ISBN Num": "9781423121701",
-            "Published Date": "2009",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
             "Checked out date": ""

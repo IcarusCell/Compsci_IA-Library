@@ -33,8 +33,11 @@
       {% endfor %}
     </tbody>
     </table>
-	<form method="get" action="/new_book">
-		<button type="post">Create New Book</button>
+	<form method="get" action="/new_book/english" style="display: inline;">
+		<button type="post">Create English New Book</button>
+	</form>
+	<form method="get" action="/new_book/french" style="display: inline;">
+		<button type="post">Create French New Book</button>
 	</form>
 {% endblock %}
 

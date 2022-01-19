@@ -131,33 +131,68 @@ def review(bookName):
                 if book.bookName == title:
                     return render_template("book_review.html")
 
-@app.route('/new_book', methods =["GET", "POST"])
-def createNewBook():
+@app.route('/new_book/<bookLanguage>', methods =["GET", "POST"])
+def createNewBook(bookLanguage):
         database = loadDatabase()
-        if request.method == "POST":
-            print(request.form['bookName'])
-            bookName = request.form['bookName']
-            print(request.form['authorName'])
-            authorName = request.form['authorName']
-            print(request.form['datePublished'])
-            datePublished = request.form['datePublished']
-            print(request.form['onIbReadingList'])
-            onIbReadingList = False
-            if request.form['onIbReadingList'] == 'Yes':
-                onIbReadingList = True
-            tags = []
-            for tag in tagList:
-                try:
-                    if request.form[tag] == 'True':
-                        tags.append(tag)
-                except:
-                    print('Tag is false')
-
-
-            overrideDatabase(database)
+        if(bookLanguage == "english"):
+            if request.method == "POST":
+                print(request.form['bookName'])
+                bookName = request.form['bookName']
+                print(request.form['authorName'])
+                authorName = request.form['authorName'].split(",")
+                print(authorName)
+                print(request.form['datePublished'])
+                datePublished = request.form['datePublished']
+                print(request.form['onIbReadingList'])
+                onIbReadingList = False
+                if request.form['onIbReadingList'] == 'Yes':
+                    onIbReadingList = True
+                tags = []
+                for tag in tagList:
+                    try:
+                        if request.form[tag] == 'True':
+                            tags.append(tag)
+                    except:
+                        print('Tag is false')
+                newBook = Book(bookName, authorName, datePublished, onIbReadingList, tags)
+                database.append(newBook)
+                overrideDatabase(database)
+                return redirect(url_for('index'))
+            else:
+                return render_template("new_english_book.html", tags = tagList, bookLanguage = bookLanguage)
+        elif(bookLanguage == "french"):
             return redirect(url_for('index'))
         else:
-            return render_template("new_book.html")
+            print('Error')
+            return redirect(url_for('index'))
+
+@app.route('/new_book/<bookLanguage>/isbn', methods =["GET", "POST"])
+def createNewBookISBN(bookLanguage):
+        database = loadDatabase()
+        if(bookLanguage == "english"):
+            if request.method == "POST":
+                isbnNum = request.form['isbnNum']
+                onIbReadingList = False
+                if request.form['onIbReadingList'] == 'Yes':
+                    onIbReadingList = True
+                tags = []
+                for tag in tagList:
+                    try:
+                        if request.form[tag] == 'True':
+                            tags.append(tag)
+                    except:
+                        print('Tag is false')
+                newBook = Book.withIsbn(isbnNum, onIbReadingList, tags)
+                database.append(newBook)
+                overrideDatabase(database)
+                return redirect(url_for('index'))
+            else:
+                return render_template("new_english_book_isbn.html", tags = tagList)
+        elif(bookLanguage == "french"):
+            return redirect(url_for('index'))
+        else:
+            print('Error')
+            return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run()

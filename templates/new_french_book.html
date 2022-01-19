@@ -1,0 +1,15 @@
+{% extends "new_book.html" %}
+
+{% block tags %}
+<label>Tags: </label><br>
+			<input type="checkbox" id="fiction" name="fiction" value="True">
+			<label for="fiction"> Is it fiction?</label><br>
+			<input type="checkbox" id="nonfiction" name="nonfiction" value="True">
+			<label for="nonfiction"> Is it non-fiction?</label><br>
+			<input type="checkbox" id="fantasy" name="fantasy" value="True">
+			<label for="fantasy"> Is it fantasy?</label><br>
+			<input type="checkbox" id="sci-fi" name="sci-fi" value="True">
+			<label for="sci-fi"> Is it sci-fi?</label><br>
+			<input type="checkbox" id="horror" name="horror" value="True">
+			<label for="horror"> Is it horror?</label><br>
+{% endblock %}

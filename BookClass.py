@@ -28,7 +28,7 @@ class Book:
         cleanTags = []
         for tag in tags:
             if tag not in cleanTags:
-                cleanTags.append(tag)
+                cleanTags.append(tag.capitalize())
         self.tags = cleanTags
         self.reviews = []
         self.checkedOutBy = ''
@@ -77,8 +77,8 @@ class Book:
                 iter = 0
                 while iter < (len(self.tags)-1):
                     iter += 1
-                    authorString = tagString + "," + self.author[iter]
-
+                    tagString = tagString + ", " + self.tags[iter]
+            print(tagString)
             return str(tagString)
         return
 

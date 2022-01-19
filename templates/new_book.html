@@ -1,5 +1,5 @@
 {% extends "basic_display.html" %}
-{% block title %}Check Out{% endblock %}
+{% block title %}Create New Book{% endblock %}
 {% block content %}
 
 
@@ -7,8 +7,8 @@
         <label for="bookName">Title</label>
         <input type="text" id="bookName" name="bookName"><br>
 		
-		<label for="author">Author</label>
-		<input type="text" id="authorName" name="authorName"><br>
+		<label for="author">Author(s)</label><br>
+		<textarea type="text" id="authorName" name="authorName" placeholder="Seperate multiple names with commas"></textarea><br>
 				
 		<label for="author">Date Published</label>
 		<input type="date" id="datePublished" name="datePublished"><br>
@@ -17,19 +17,17 @@
 			<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
 			<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
 			<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
-		
-		<label>Tags: </label><br>
-		<input type="checkbox" id="fiction" name="fiction" value="True">
-		<label for="fiction"> Is it fiction?</label><br>
-		<input type="checkbox" id="nonfiction" name="nonfiction" value="True">
-		<label for="nonfiction"> Is it non-fiction?</label><br>
-		<input type="checkbox" id="fantasy" name="fantasy" value="True">
-		<label for="fantasy"> Is it fantasy?</label><br>
-		<input type="checkbox" id="sci-fi" name="sci-fi" value="True">
-		<label for="sci-fi"> Is it sci-fi?</label><br>
-		<input type="checkbox" id="horror" name="horror" value="True">
-		<label for="horror"> Is it horror?</label><br>
-		
+		{% block tags %}
+		{% endblock %}
         <button type="submit">Submit</button>
     </form>
+	{% if bookLanguage == 'english' %}
+			<form method="get" action="/new_book/english/isbn" style="display: inline;">
+				<button type="post">Use ISBN</button>	
+			</form>
+		{% else %}
+			<form method="get" action="/new_book/french/isbn" style="display: inline;">
+				<button type="post">Use ISBN</button>	
+			</form>
+		{% endif %}
 {% endblock %}
