@@ -1,0 +1,4 @@
+{% extends "new_english_book.html" %}
+{% block title %}Create New Book{% endblock %}
+{% block isbn %}
+{% endblock %}
