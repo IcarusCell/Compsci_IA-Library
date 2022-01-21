@@ -34,8 +34,12 @@
 				<form method="get" action="/book/remove/{{ book.bookName }}" style="display: inline;">
 					<button type="submit">Delete Book</button>
 				</form>
+				<form method="get" action="/book/edit/{{ book.bookName }}/{% if book.isFrench == true %}french{%else%}english{%endif%}" style="display: inline;">
+					<button type="submit">Edit Book</button>
+				</form>
 				<form method="get" action="/book/review/{{ book.bookName }}" style="display: inline;">
 					<button type="submit">New Review</button>
 				</form>
+				
 	</div>
 {% endblock %}

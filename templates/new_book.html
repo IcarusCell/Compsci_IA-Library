@@ -21,13 +21,6 @@
 		{% endblock %}
         <button type="submit">Submit</button>
     </form>
-	{% if bookLanguage == 'english' %}
-			<form method="get" action="/new_book/english/isbn" style="display: inline;">
-				<button type="post">Use ISBN</button>	
-			</form>
-		{% else %}
-			<form method="get" action="/new_book/french/isbn" style="display: inline;">
-				<button type="post">Use ISBN</button>	
-			</form>
-		{% endif %}
+	{% block isbn %}
+	{% endblock %}
 {% endblock %}

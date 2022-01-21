@@ -194,5 +194,69 @@ def createNewBookISBN(bookLanguage):
             print('Error')
             return redirect(url_for('index'))
 
+@app.route('/book/edit/<bookTitle>/<bookLanguage>', methods =["GET", "POST"])
+def editBook(bookTitle, bookLanguage):
+        database = loadDatabase()
+        if(bookLanguage == "english"):
+            if request.method == "POST":
+                for book in database:
+                    if book.bookName == bookTitle:
+                        if request.form['bookName'] != '':
+                            bookName = request.form['bookName']
+                        else:
+                            bookName = book.bookName
+                        if request.form['authorName'] != '':
+                            authorName = request.form['authorName'].split(",")
+                        else:
+                            authorName = book.author
+                        if request.form['datePublished'] != '':
+                            datePublished = request.form['datePublished']
+                        else:
+                            datePublished = book.publishedDate
+                        try:
+                            print('Cleared IB Reading list check')
+                            onIbReadingList = False
+                            if request.form['onIbReadingList'] == 'Yes':
+                                onIbReadingList = True
+                        except:
+                            onIbReadingList = book.onIbReadingList
+                        tags = []
+                        tagSelect = False
+                        for tag in tagList:
+                            try:
+                                if request.form[tag] == 'True':
+                                    tagSelect = True
+                            except:
+                                print('Tag check is false')
+                        if tagSelect == True:
+                            for tag in tagList:
+                                try:
+                                    if request.form[tag] == 'True':
+                                        tags.append(tag)
+                                except:
+                                    print('Tag is false')
+                        else:
+                            tags = book.tags
+                        check = 0
+                        for title in database:
+                            if title.bookName == book.bookName:
+                                database.pop(check)
+                            check += 1
+                        newBook = Book(bookName, authorName, datePublished, onIbReadingList, tags)
+                        database.append(newBook)
+                        overrideDatabase(database)
+                        print('Running through POST code')
+                        return redirect(url_for('index'))
+            else:
+                print('Running through non-POST code')
+                return render_template("edit_english_book.html", tags = tagList, bookLanguage = bookLanguage)
+        elif(bookLanguage == "french"):
+            return redirect(url_for('index'))
+        else:
+            print(bookLanguage)
+            print('Error')
+            return redirect(url_for('index'))
+
+
 if __name__ == '__main__':
     app.run()

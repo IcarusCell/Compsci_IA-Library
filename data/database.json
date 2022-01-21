@@ -1,36 +1,19 @@
 {
     "stored_books": [
         {
-            "Book Name": "League of Extraordinary Gentlemen - the Tempest",
+            "Book Name": "Jekyll Island Chronicles - Machine Age War",
             "Author": [
-                "Alan Moore",
-                "Kevin O'Neill"
+                "Steve Nedvidek",
+                "Ed Crowell",
+                "Jack Lowe",
+                "Moses Nester",
+                "S. J. Miller"
             ],
-            "ISBN Num": "978-1-60309-456-6",
-            "Published Date": "2019",
+            "ISBN Num": "978-1-60309-388-0",
+            "Published Date": "2017",
             "On IB Reading List": true,
             "Checked In": true,
-            "Tags": [
-                "Fiction",
-                "Nonfiction",
-                "Fantasy"
-            ],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "Test",
-            "Author": [
-                "test"
-            ],
-            "ISBN Num": "",
-            "Published Date": "2022-01-14",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [
-                "Nonfiction"
-            ],
+            "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
             "Checked out date": ""
@@ -44,8 +27,89 @@
             "Published Date": "2000",
             "On IB Reading List": true,
             "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "League of Extraordinary Gentlemen - the Tempest",
+            "Author": [
+                "Alan Moore",
+                "Kevin O'Neill"
+            ],
+            "ISBN Num": "978-1-60309-456-6",
+            "Published Date": "2019",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "March - Book Three",
+            "Author": [
+                "John Lewis",
+                "Nate Powell",
+                "Andrew Aydin"
+            ],
+            "ISBN Num": "978-1-60309-402-3",
+            "Published Date": "2016",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "Penny Nichols",
+            "Author": [
+                "M. K. Reed",
+                "Greg Means",
+                "Matt Wiegle"
+            ],
+            "ISBN Num": "978-1-60309-448-1",
+            "Published Date": "2019",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
+            "Author": [
+                "Rick Riordan",
+                "Editorial Universe",
+                "Jesse Bernstein"
+            ],
+            "ISBN Num": "9781423121701",
+            "Published Date": "2009",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": ""
+        },
+        {
+            "Book Name": "The Gunslinger",
+            "Author": [
+                "Stephen King",
+                " Mark Robert"
+            ],
+            "ISBN Num": "",
+            "Published Date": "1997",
+            "On IB Reading List": true,
+            "Checked In": true,
             "Tags": [
-                "Nonfiction"
+                "Fiction",
+                "Fantasy",
+                "Sci-fi",
+                "Horror"
             ],
             "Reviews": [],
             "Checked out by:": "",
