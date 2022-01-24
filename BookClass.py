@@ -20,7 +20,13 @@ class Book:
             if name not in cleanNames:
                 cleanNames.append(name)
         self.author = cleanNames
-
+        """nama = ('a', 'B', 'A')
+        for i in range(len(self.author) - 1, 0, -1):
+            for j in range(i):
+                if self.author[j] > nama[j + 1]:
+                    temp2 = nama[j]
+                    nama[j] = nama[j + 1]
+                    nama[j + 1] = temp2"""
         self.isbnNum = ''
         self.publishedDate = publishedDate
         self.onIbReadingList = onIbReadingList

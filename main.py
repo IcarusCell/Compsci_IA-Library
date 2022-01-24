@@ -1,7 +1,6 @@
 import json
 from isbnlib import *
 from BookClass import *
-from ReviewClass import *
 from json import *
 from databaseClass import *
 from flask import Flask, render_template, request, redirect, url_for
@@ -119,10 +118,7 @@ def review(bookName):
             for book in database:
                 if book.bookName == title:
                     summary = str(request.form['review'])
-                    #score = int(request.form['score'])
-                    #review = Review(score, summary)
-
-                    book.reviews.append(summary)#review)
+                    book.reviews.append(summary)
             overrideDatabase(database)
             return redirect(url_for('index'))
         else:
