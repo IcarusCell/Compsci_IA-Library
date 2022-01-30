@@ -16,7 +16,23 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
+        },
+        {
+            "Book Name": "The Gunslinger",
+            "Author": [
+                "Stephen King"
+            ],
+            "ISBN Num": "9780452279605",
+            "Published Date": "1997",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": "",
+            "Original language": "English"
         },
         {
             "Book Name": "Harry Potter and the Philosopher's Stone",
@@ -30,7 +46,8 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
         },
         {
             "Book Name": "League of Extraordinary Gentlemen - the Tempest",
@@ -45,7 +62,8 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
         },
         {
             "Book Name": "March - Book Three",
@@ -61,7 +79,8 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
         },
         {
             "Book Name": "Penny Nichols",
@@ -77,7 +96,8 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
         },
         {
             "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
@@ -93,27 +113,8 @@
             "Tags": [],
             "Reviews": [],
             "Checked out by:": "",
-            "Checked out date": ""
-        },
-        {
-            "Book Name": "The Gunslinger",
-            "Author": [
-                "Stephen King",
-                " Mark Robert"
-            ],
-            "ISBN Num": "",
-            "Published Date": "1997",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [
-                "Fiction",
-                "Fantasy",
-                "Sci-fi",
-                "Horror"
-            ],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": ""
+            "Checked out date": "",
+            "Original language": "English"
         }
     ]
 }

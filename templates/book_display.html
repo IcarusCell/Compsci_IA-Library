@@ -6,8 +6,12 @@
 	<body style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
 		<p>Author: {{book.authorString}}</p>
 		<p>Date Published: {{book.publishedDate}}</p>
-		<p>Is the book checked in: {{book.checkedIn}}</p>
-		<p>Is the book on the IB Reading list: {{book.onIbReadingList}}</p>
+		{% if book.checkedIn == true %}
+				<p>Is the book checked in: Yes</p>
+		{% else %}
+				<p>Is the book checked in: No</p>
+		{% endif %}
+		<p>Is the book on the IB Author list: {{book.onIbReadingList}}</p>
 		<p>Tags: {{book.tagString}}</p>
 		<p>Reviews: </p>
 		{% for review in book.reviews %}

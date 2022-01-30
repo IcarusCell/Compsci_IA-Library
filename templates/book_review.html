@@ -1,14 +1,14 @@
 {% extends "basic_display.html" %}
-{% block title %}Check Out{% endblock %}
+{% block title %}Create Review{% endblock %}
 {% block content %}
 
 
-    <form method="post">
-        <label for="review">Review</label>
+    <form method="post" style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
+		<h1>New Review</h1>
         <br>
-        <textarea name="review"
-                  placeholder="Please enter your full text review here"
-                  >{{ request.form['review'] }}</textarea>
+        <textarea name="review" placeholder="Please enter your full text review here" rows="8" cols="100">
+			{{ request.form['review'] }}
+		</textarea>
         <br>
         <button type="submit">Submit</button>
     </form>

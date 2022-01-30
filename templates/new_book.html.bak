@@ -1,33 +1,27 @@
 {% extends "basic_display.html" %}
 {% block title %}Create New Book{% endblock %}
 {% block content %}
-
-
-    <form method="post">
-        <label for="bookName">Title</label>
-        <input type="text" id="bookName" name="bookName"><br>
-		
-		<label for="author">Author(s)</label><br>
-		<textarea type="text" id="authorName" name="authorName" placeholder="Seperate multiple names with commas"></textarea><br>
-				
-		<label for="author">Date Published</label>
-		<input type="date" id="datePublished" name="datePublished"><br>
-		<label for="onIbReadingList">On IB Reading List:</label><br>
-			<label for = "yesOnIbReadingList" style="text-indent: 3em">Yes</label>
-			<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
-			<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
-			<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
-		{% block tags %}
+	<div style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;"> 
+		<form method="post">
+			{% block header %}{%endblock%}
+			<label for="bookName">Title</label>
+			<input type="text" id="bookName" name="bookName"><br>
+			
+			<label for="author">Author(s)</label><br>
+			<textarea type="text" id="authorName" name="authorName" placeholder="Seperate multiple names with commas"></textarea><br>
+					
+			<label for="author">Date Published</label>
+			<input type="date" id="datePublished" name="datePublished"><br>
+			<label for="onIbReadingList">On IB Author List:</label><br>
+				<label for = "yesOnIbReadingList" style="text-indent: 3em">Yes</label>
+				<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
+				<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
+				<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
+			{% block tags %}
+			{% endblock %}
+			<button type="submit">Submit</button>
+		</form>
+		{% block isbn %}
 		{% endblock %}
-        <button type="submit">Submit</button>
-    </form>
-	{% if bookLanguage == 'english' %}
-			<form method="get" action="/new_book/english/isbn" style="display: inline;">
-				<button type="post">Use ISBN</button>	
-			</form>
-		{% else %}
-			<form method="get" action="/new_book/french/isbn" style="display: inline;">
-				<button type="post">Use ISBN</button>	
-			</form>
-		{% endif %}
+	</div>
 {% endblock %}

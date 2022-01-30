@@ -8,10 +8,10 @@
         <th>Name</th>
         <th>Author Name</th>
         <th>Date Published</th>
-        <th>On IB Reading list</th>
+        <th>On IB Author list</th>
         <th>Checked In</th>
 		<th>Tags</th>
-		<th>French</th>
+		<th>Original Language</th>
       </tr>
     </thead>
     <tbody>
@@ -28,16 +28,13 @@
 			<td>{{ book.onIbReadingList }}</td>
 			<td>{{ book.checkedIn }}</td>
 			<td>{{ book.tagString }}</td>
-			<td>{{ book.isFrench }}</td>				
+			<td>{{ book.originalLanguage }}</td>				
         </tr>
       {% endfor %}
     </tbody>
     </table>
-	<form method="get" action="/new_book/english" style="display: inline;">
-		<button type="post">Create English New Book</button>
-	</form>
-	<form method="get" action="/new_book/french" style="display: inline;">
-		<button type="post">Create French New Book</button>
+	<form method="get" action="/new_book/" style="display: inline;">
+		<button type="post">Create New Book</button>
 	</form>
 {% endblock %}
 

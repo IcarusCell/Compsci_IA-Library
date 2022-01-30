@@ -1,5 +1,7 @@
 import json
-
+#OnPrescribedAuthorList
+#Change the 'Is French' section to 'Original Lanugage'
+#Change the 'Checked-In' question to 'Yes' instead of T/F
 from BookClass import *
 import json
 def saveToDatabase(book):
@@ -16,7 +18,8 @@ def saveToDatabase(book):
                 'Tags': book.tags,
                 'Reviews': book.reviews,
                 'Checked out by:': book.checkedOutBy,
-                'Checked out date': book.checkedOutDate
+                'Checked out date': book.checkedOutDate,
+                'Original language': book.originalLanguage
         }
         jsonFile["stored_books"].append(detailDict)
         database.seek(0)
@@ -53,6 +56,7 @@ def loadDatabase():
                newBook.isbnNum = str(book["ISBN Num"])
                newBook.reviews = book["Reviews"]
                newBook.checkedOutDate = str(book['Checked out date'])
+               newBook.originalLanguage = str(book['Original language'])
                books.append(newBook)
         return books
 

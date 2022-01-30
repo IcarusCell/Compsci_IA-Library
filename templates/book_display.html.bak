@@ -6,7 +6,11 @@
 	<body style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
 		<p>Author: {{book.authorString}}</p>
 		<p>Date Published: {{book.publishedDate}}</p>
-		<p>Is the book checked in: {{book.checkedIn}}</p>
+		{% if book.checkedIn == true %}
+				<p>Is the book checked in: Yes</p>
+		{% else %}
+				<p>Is the book checked in: No</p>
+		{% endif %}
 		<p>Is the book on the IB Reading list: {{book.onIbReadingList}}</p>
 		<p>Tags: {{book.tagString}}</p>
 		<p>Reviews: </p>
@@ -34,7 +38,7 @@
 				<form method="get" action="/book/remove/{{ book.bookName }}" style="display: inline;">
 					<button type="submit">Delete Book</button>
 				</form>
-				<form method="get" action="/book/edit/{{ book.bookName }}/{% if book.isFrench == true %} french {%else%} english {%endif%}" style="display: inline;">
+				<form method="get" action="/book/edit/{{ book.bookName }}/{% if book.isFrench == true %}french{%else%}english{%endif%}" style="display: inline;">
 					<button type="submit">Edit Book</button>
 				</form>
 				<form method="get" action="/book/review/{{ book.bookName }}" style="display: inline;">
