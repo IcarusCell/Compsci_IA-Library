@@ -1,7 +1,3 @@
-import json
-#OnPrescribedAuthorList
-#Change the 'Is French' section to 'Original Lanugage'
-#Change the 'Checked-In' question to 'Yes' instead of T/F
 from BookClass import *
 import json
 def saveToDatabase(book):
@@ -46,7 +42,7 @@ def loadDatabase():
         #Open the database file in the data directory
         with open('data\database.json') as database:
             #The database is loaded into an array of dictionaries
-            jsonFile = load(database)
+            jsonFile = json.load(database)
             #For each book in the dictionary, it is saved to a book object using the information from the database.
             #The book is then appended to the books list.
             for book in jsonFile["stored_books"]:

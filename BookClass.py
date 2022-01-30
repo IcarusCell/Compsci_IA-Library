@@ -1,5 +1,5 @@
 from isbnlib import *
-from json import *
+from sort import *
 #Book Class:
     #String[] tags
     #String isbnNum
@@ -19,14 +19,7 @@ class Book:
         for name in author:
             if name not in cleanNames:
                 cleanNames.append(name)
-        self.author = cleanNames
-        """nama = ('a', 'B', 'A')
-        for i in range(len(self.author) - 1, 0, -1):
-            for j in range(i):
-                if self.author[j] > nama[j + 1]:
-                    temp2 = nama[j]
-                    nama[j] = nama[j + 1]
-                    nama[j + 1] = temp2"""
+        self.author = sort(cleanNames)
         self.isbnNum = ''
         self.publishedDate = publishedDate
         self.onIbReadingList = onIbReadingList
@@ -35,7 +28,7 @@ class Book:
         for tag in tags:
             if tag not in cleanTags:
                 cleanTags.append(tag.capitalize())
-        self.tags = cleanTags
+        self.tags = sort(cleanTags)
         self.reviews = []
         self.checkedOutBy = ''
         self.authorString = self.authorNamesInString()
@@ -87,8 +80,6 @@ class Book:
             print(tagString)
             return str(tagString)
         return
-
-
 
 def fillISBN(isbn, readingList, tags, key):
     isbnGrab = meta(isbn, key)

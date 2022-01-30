@@ -19,12 +19,14 @@
 				<p>{{review}}</p>
 			</div>
 		{% endfor %}
+	</body>
 	<body>
 	{% if book.checkedIn == false %}
 		<p>Checked Out By: {{book.checkedOutBy }}</p>
 		<p>Checked Out On (y/m/d): {{book.checkedOutDate}}</p>
 		
 	{% endif %}
+	</body>
 	<div>
 			{% if book.checkedIn == true %}
 				<form method="get" action="/book/check_out/{{ book.bookName }}" style="display: inline;">
@@ -46,4 +48,5 @@
 				</form>
 				
 	</div>
+	
 {% endblock %}

@@ -3,10 +3,10 @@
         {
             "Book Name": "Jekyll Island Chronicles - Machine Age War",
             "Author": [
-                "Steve Nedvidek",
                 "Ed Crowell",
                 "Jack Lowe",
                 "Moses Nester",
+                "Steve Nedvidek",
                 "S. J. Miller"
             ],
             "ISBN Num": "978-1-60309-388-0",
@@ -68,9 +68,9 @@
         {
             "Book Name": "March - Book Three",
             "Author": [
+                "Andrew Aydin",
                 "John Lewis",
-                "Nate Powell",
-                "Andrew Aydin"
+                "Nate Powell"
             ],
             "ISBN Num": "978-1-60309-402-3",
             "Published Date": "2016",
@@ -85,8 +85,8 @@
         {
             "Book Name": "Penny Nichols",
             "Author": [
-                "M. K. Reed",
                 "Greg Means",
+                "M. K. Reed",
                 "Matt Wiegle"
             ],
             "ISBN Num": "978-1-60309-448-1",
@@ -100,11 +100,26 @@
             "Original language": "English"
         },
         {
+            "Book Name": "Moby Dick",
+            "Author": [
+                "Herman Melville"
+            ],
+            "ISBN Num": "9783863524586",
+            "Published Date": "2020",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": "",
+            "Original language": "English"
+        },
+        {
             "Book Name": "The Percy Jackson and the Olympians, Book One - Lightning Thief Deluxe Edition",
             "Author": [
-                "Rick Riordan",
                 "Editorial Universe",
-                "Jesse Bernstein"
+                "Jesse Bernstein",
+                "Rick Riordan"
             ],
             "ISBN Num": "9781423121701",
             "Published Date": "2009",
