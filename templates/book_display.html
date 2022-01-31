@@ -2,51 +2,53 @@
 {% block title %}{{book.bookName}}{% endblock %}
 {% block content %}
 
-<h1>{{book.bookName}}</h1>
-	<body style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
-		<p>Author: {{book.authorString}}</p>
-		<p>Date Published: {{book.publishedDate}}</p>
-		{% if book.checkedIn == true %}
-				<p>Is the book checked in: Yes</p>
-		{% else %}
-				<p>Is the book checked in: No</p>
-		{% endif %}
-		<p>Is the book on the IB Author list: {{book.onIbReadingList}}</p>
-		<p>Tags: {{book.tagString}}</p>
-		<p>Reviews: </p>
-		{% for review in book.reviews %}
-			<div style="border:2px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
-				<p>{{review}}</p>
-			</div>
-		{% endfor %}
-	</body>
-	<body>
-	{% if book.checkedIn == false %}
-		<p>Checked Out By: {{book.checkedOutBy }}</p>
-		<p>Checked Out On (y/m/d): {{book.checkedOutDate}}</p>
-		
-	{% endif %}
-	</body>
-	<div>
+
+	<div style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
+		<h1>{{book.bookName}}</h1>
+		<body>
+			<p>Author: {{book.authorString}}</p>
+			<p>Date Published: {{book.publishedDate}}</p>
 			{% if book.checkedIn == true %}
-				<form method="get" action="/book/check_out/{{ book.bookName }}" style="display: inline;">
-					<button type="submit">Check Out</button>
-				</form>
+					<p>Is the book checked in: Yes</p>
 			{% else %}
-				<form method="get" action="/book/check_in/{{ book.bookName }}" style="display: inline;">
-					<button type="submit">Check In</button>
-				</form>
+					<p>Is the book checked in: No</p>
 			{% endif %}
-				<form method="get" action="/book/remove/{{ book.bookName }}" style="display: inline;">
-					<button type="submit">Delete Book</button>
-				</form>
-				<form method="get" action="/book/edit/{{ book.bookName }}/{% if book.isFrench == true %}french{%else%}english{%endif%}" style="display: inline;">
-					<button type="submit">Edit Book</button>
-				</form>
-				<form method="get" action="/book/review/{{ book.bookName }}" style="display: inline;">
-					<button type="submit">New Review</button>
-				</form>
-				
+			<p>Is the book on the IB Author list: {{book.onIbReadingList}}</p>
+			<p>Tags: {{book.tagString}}</p>
+			<p>Reviews: </p>
+			{% for review in book.reviews %}
+				<div style="border:2px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
+					<p>{{review}}</p>
+				</div>
+			{% endfor %}
+		</body>
+		<body>
+		{% if book.checkedIn == false %}
+			<p>Checked Out By: {{book.checkedOutBy }}</p>
+			<p>Checked Out On (y/m/d): {{book.checkedOutDate}}</p>
+			
+		{% endif %}
+		</body>
+		<div>
+				{% if book.checkedIn == true %}
+					<form method="get" action="/book/check_out/{{ book.bookName }}" style="display: inline;">
+						<button type="submit">Check Out</button>
+					</form>
+				{% else %}
+					<form method="get" action="/book/check_in/{{ book.bookName }}" style="display: inline;">
+						<button type="submit">Check In</button>
+					</form>
+				{% endif %}
+					<form method="get" action="/book/remove/{{ book.bookName }}" style="display: inline;">
+						<button type="submit">Delete Book</button>
+					</form>
+					<form method="get" action="/book/edit/{{ book.bookName }}/" style="display: inline;">
+						<button type="submit">Edit Book</button>
+					</form>
+					<form method="get" action="/book/review/{{ book.bookName }}" style="display: inline;">
+						<button type="submit">New Review</button>
+					</form>
+					
+		</div>
 	</div>
-	
 {% endblock %}

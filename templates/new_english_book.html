@@ -5,7 +5,7 @@
 <label>Tags: </label><br>
 			{% for tag in tags %}
 				<input type="checkbox" id={{tag}} name={{tag}} value="True">
-				<label for={{tag}}> Is it {{tag}}?</label><br>
+				<label for={{tag}}>{{tag.capitalize()}}</label><br>
 			{% endfor %}
 {% endblock %}
 {% block isbn%}

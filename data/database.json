@@ -83,23 +83,6 @@
             "Original language": "English"
         },
         {
-            "Book Name": "Penny Nichols",
-            "Author": [
-                "Greg Means",
-                "M. K. Reed",
-                "Matt Wiegle"
-            ],
-            "ISBN Num": "978-1-60309-448-1",
-            "Published Date": "2019",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": "",
-            "Original language": "English"
-        },
-        {
             "Book Name": "Moby Dick",
             "Author": [
                 "Herman Melville"
@@ -129,6 +112,25 @@
             "Reviews": [],
             "Checked out by:": "",
             "Checked out date": "",
+            "Original language": "English"
+        },
+        {
+            "Book Name": "Penny Nichols",
+            "Author": [
+                "Greg Means",
+                "M. K. Reed",
+                "Matt Wiegle"
+            ],
+            "ISBN Num": "",
+            "Published Date": "2019",
+            "On IB Reading List": true,
+            "Checked In": false,
+            "Tags": [
+                "Crime"
+            ],
+            "Reviews": [],
+            "Checked out by:": "Thomas Carrol",
+            "Checked out date": "2022-01-20",
             "Original language": "English"
         }
     ]
