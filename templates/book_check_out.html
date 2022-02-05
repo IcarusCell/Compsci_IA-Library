@@ -2,20 +2,22 @@
 {% block title %}Check Out{% endblock %}
 {% block content %}
 
+	<div style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;">
+		<h1>Check Out</h1>
+		<form method="post">
+			<label for="student_name">Student Name</label>
+			<br>
+			<input type="text" name="student_name"
+				   placeholder="Full Student Name"
+				   value="{{ request.form['student_name'] }}"></input>
+			<br>
 
-    <form method="post">
-        <label for="student_name">Student Name</label>
-        <br>
-        <input type="text" name="student_name"
-               placeholder="Full Student Name"
-               value="{{ request.form['student_name'] }}"></input>
-        <br>
+			<label for="submit_date">Current Date</label>
+			<br>
+			<input type="date" id="submit_date" name="submit_date">
 
-        <label for="submit_date">Current Date</label>
-        <br>
-		<input type="date" id="submit_date" name="submit_date">
-
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+			<br>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
 {% endblock %}
