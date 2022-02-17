@@ -166,7 +166,10 @@ def createNewBookISBN():
             if newBook is None:
                 return redirect(url_for('index'))
             originalLanguage = str(request.form['originalLanguage'])
-            newBook.originalLanguage = originalLanguage
+            if originalLanguage != '':
+                newBook.originalLanguage = originalLanguage
+            else:
+                newBook.originalLanguage = 'English'
             database.append(newBook)
             overrideDatabase(database)
             return redirect(url_for('index'))
