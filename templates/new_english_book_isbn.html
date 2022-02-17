@@ -14,7 +14,7 @@
 		<label>Tags: </label><br>
 					{% for tag in tags %}
 						<input type="checkbox" id={{tag}} name={{tag}} value="True">
-						<label for={{tag}}> Is it {{tag}}?</label><br>
+				<label for={{tag}}>{{tag.capitalize()}}</label><br>
 					{% endfor %}
 		<label for="originalLanguage">Original Language</label>
 		<textarea type="text" id="originalLanguage" name="originalLanguage" placeholder="English"></textarea><br>
