@@ -35,21 +35,6 @@
             "Original language": "English"
         },
         {
-            "Book Name": "Harry Potter and the Philosopher's Stone",
-            "Author": [
-                "J. K. Rowling"
-            ],
-            "ISBN Num": "9780747532743",
-            "Published Date": "2000",
-            "On IB Reading List": true,
-            "Checked In": true,
-            "Tags": [],
-            "Reviews": [],
-            "Checked out by:": "",
-            "Checked out date": "",
-            "Original language": "English"
-        },
-        {
             "Book Name": "League of Extraordinary Gentlemen - the Tempest",
             "Author": [
                 "Alan Moore",
@@ -132,6 +117,22 @@
             "Checked out by:": "Thomas Carrol",
             "Checked out date": "2022-01-20",
             "Original language": "English"
+        },
+        {
+            "Book Name": "Test ",
+            "Author": [
+                "Test"
+            ],
+            "ISBN Num": "",
+            "Published Date": "2022-02-10",
+            "On IB Reading List": true,
+            "Checked In": true,
+            "Tags": [],
+            "Reviews": [],
+            "Checked out by:": "",
+            "Checked out date": "",
+            "Original language": "English"
         }
+       
     ]
 }

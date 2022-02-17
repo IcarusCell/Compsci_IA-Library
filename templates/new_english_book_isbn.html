@@ -1,21 +1,22 @@
 {% extends "basic_display.html" %}
 {%block title%}Create New Book ISBN{%endblock%}
 {%block content%}
-
-<form method="post">
-	<label for="isbnNum">ISBN Num</label><br>
-			<textarea type="text" id="isbnNum" name="isbnNum"></textarea><br>
-	<label for="onIbReadingList">On IB Author List:</label><br>
-			<label for = "yesOnIbReadingList" style="text-indent: 3em">Yes</label>
-			<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
-			<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
-			<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
-	<label>Tags: </label><br>
-				{% for tag in tags %}
-					<input type="checkbox" id={{tag}} name={{tag}} value="True">
-					<label for={{tag}}> Is it {{tag}}?</label><br>
-				{% endfor %}
-	<button type="submit">Submit</button>
- </form>
-			
+<div style="border:8px; border-style:solid; border-color:#A9A9A9; padding: 1em;"> 
+	<h1>Create New Book With ISBN</h1>
+	<form method="post">
+		<label for="isbnNum">ISBN Num</label><br>
+				<textarea type="text" id="isbnNum" name="isbnNum"></textarea><br>
+		<label for="onIbReadingList">On IB Author List:</label><br>
+				<label for = "yesOnIbReadingList" style="text-indent: 3em">Yes</label>
+				<input type="radio" id="yesOnIbReadingList" name="onIbReadingList" value = "Yes"> <br>
+				<label for = "noOnIbReadingList" style="text-indent: 3em">No</label>
+				<input type="radio" id="noOnIbReadingList" name="onIbReadingList" value = "No"><br>
+		<label>Tags: </label><br>
+					{% for tag in tags %}
+						<input type="checkbox" id={{tag}} name={{tag}} value="True">
+						<label for={{tag}}> Is it {{tag}}?</label><br>
+					{% endfor %}
+		<button type="submit">Submit</button>
+	</form>
+</div>	
 {%endblock%}
