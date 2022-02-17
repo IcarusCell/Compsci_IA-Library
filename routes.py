@@ -111,12 +111,17 @@ def review(bookName):
 def createNewBook():
         database = loadDatabase()
         if request.method == "POST":
+            if request.form['bookName'] == '':
+                return redirect(url_for('index'))
             bookName = request.form['bookName']
             authorName = request.form['authorName'].split(",")
             datePublished = request.form['datePublished']
             onIbReadingList = False
-            if request.form['onIbReadingList'] == 'Yes':
-                onIbReadingList = True
+            try:
+                if request.form['onIbReadingList'] == 'Yes':
+                    onIbReadingList = True
+            except:
+                print('No value for onIbReadingList')
             tags = []
             for tag in tagList:
                 try:
@@ -145,8 +150,11 @@ def createNewBookISBN():
         if request.method == "POST":
             isbnNum = request.form['isbnNum']
             onIbReadingList = False
-            if request.form['onIbReadingList'] == 'Yes':
-                onIbReadingList = True
+            try:
+                if request.form['onIbReadingList'] == 'Yes':
+                    onIbReadingList = True
+            except:
+                print('No value for onIbReadingList')
             tags = []
             for tag in tagList:
                 try:
@@ -155,6 +163,8 @@ def createNewBookISBN():
                 except:
                     print('Tag is false')
             newBook = Book.withIsbn(isbnNum, onIbReadingList, tags)
+            if newBook is None:
+                return redirect(url_for('index'))
             originalLanguage = str(request.form['originalLanguage'])
             newBook.originalLanguage = originalLanguage
             database.append(newBook)

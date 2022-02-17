@@ -1,7 +1,7 @@
 #--BookClass is imported so that the database functions can properly account
 #for the class type.--
 #--json is imported so that the database can be saved to a json format.--
-from BookClass import *
+from bookClass import *
 import json
 
 #--The book object is saved into a dictionary which is then imported into a
