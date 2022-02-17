@@ -233,6 +233,7 @@ def editBook(bookTitle):
                         newBook.checkedIn = bookBackup.checkedIn
                         newBook.checkedOutBy = bookBackup.checkedOutBy
                         newBook.checkedOutDate = bookBackup.checkedOutDate
+                        newBook.reviews = bookBackup.reviews
                     except:
                         print('No book found')
 
